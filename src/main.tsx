@@ -1,9 +1,20 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.tsx'
+import ReactDOM from 'react-dom/client'
+import { BrowserRouter, Route, Routes } from 'react-router'
+import App from './App'
+import { routes } from './router/route'
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+import './assets/tailwind.css'
+
+const root = document.getElementById('root')
+
+ReactDOM.createRoot(root).render(
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />}>
+        {routes.map(route => (
+          <Route key={route.key} path={route.key} element={route.element} />
+        ))}
+      </Route>
+    </Routes>
+  </BrowserRouter>,
 )

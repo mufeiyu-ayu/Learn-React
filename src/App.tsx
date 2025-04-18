@@ -1,13 +1,39 @@
-import { Button } from 'antd'
+import { Menu } from 'antd'
+import React from 'react'
+import { Outlet, Route, Routes, useNavigate } from 'react-router'
 
-function App() {
+import { routes } from './router/route'
+import Page1 from './views/page1'
+import Page2 from './views/page2'
+
+const App: React.FC = () => {
+  const navigate = useNavigate()
+
+  const onClick = (e) => {
+    navigate(e.key)
+  }
+
   return (
-    <div>
-      <Button type="primary">Click me</Button>
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
-    </div>
+    <>
+
+      <div className="w-screen h-screen overflow-hidden flex">
+        <div>
+          <Menu
+            onClick={onClick}
+            style={{ width: 256 }}
+            defaultSelectedKeys={['1']}
+            defaultOpenKeys={['sub1']}
+            mode="inline"
+            items={routes}
+          />
+        </div>
+        <div className="flex-1">
+          <Outlet />
+        </div>
+      </div>
+
+    </>
+
   )
 }
 
