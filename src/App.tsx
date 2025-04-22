@@ -1,10 +1,8 @@
 import { Menu } from 'antd'
 import React from 'react'
-import { Outlet, Route, Routes, useNavigate } from 'react-router'
+import { Outlet, useNavigate } from 'react-router'
 
 import { routes } from './router/route'
-import Page1 from './views/page1'
-import Page2 from './views/page2'
 
 const App: React.FC = () => {
   const navigate = useNavigate()
@@ -15,7 +13,6 @@ const App: React.FC = () => {
 
   return (
     <>
-
       <div className="w-screen h-screen overflow-hidden flex">
         <div>
           <Menu
@@ -31,7 +28,6 @@ const App: React.FC = () => {
           <Outlet />
         </div>
       </div>
-
     </>
 
   )

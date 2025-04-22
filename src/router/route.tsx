@@ -5,7 +5,7 @@ import { AppstoreOutlined } from '@ant-design/icons'
 
 export const routes = [
   {
-    label: 'page1',
+    label: '121',
     icon: <AppstoreOutlined />,
     key: '/page1',
     element: <Page1 />,
