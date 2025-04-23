@@ -1,6 +1,7 @@
 import type { MenuProps } from 'antd'
 import Page1 from '@/views/page1'
 import Page2 from '@/views/page2'
+import Page3 from '@/views/page3'
 import { AppstoreOutlined } from '@ant-design/icons'
 
 export const routes = [
@@ -15,5 +16,11 @@ export const routes = [
     icon: <AppstoreOutlined />,
     key: '/page2',
     element: <Page2 />,
+  },
+  {
+    label: 'page3',
+    icon: <AppstoreOutlined />,
+    key: '/page3',
+    element: <Page3 />,
   },
 ]
