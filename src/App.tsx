@@ -24,7 +24,7 @@ const App: React.FC = () => {
             items={routes}
           />
         </div>
-        <div className="flex-1">
+        <div className="flex-1 p-4">
           <Outlet />
         </div>
       </div>

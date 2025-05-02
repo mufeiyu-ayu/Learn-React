@@ -1,6 +1,7 @@
-// eslint.config.js
+// @ts-ignore
 import antfu from '@antfu/eslint-config'
 
+// @ts-ignore
 export default antfu(
 
   // 基础配置
@@ -21,6 +22,8 @@ export default antfu(
       'ts/max-params': ['error', { max: 3 }],
       'ts/ban-ts-comment': 'off', // 关闭使用ts-ignore
       'ts-ignore': 'off', // 关闭使用ts-ignore
+      'react-dom/no-missing-button-type': 'off',
+      'no-alert': 'off',
     },
 
   },
