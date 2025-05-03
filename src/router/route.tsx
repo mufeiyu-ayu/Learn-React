@@ -3,6 +3,7 @@ import Page1 from '@/views/page1'
 import Page2 from '@/views/page2'
 import Page3 from '@/views/page3'
 import Page4 from '@/views/page4'
+import Page5 from '@/views/page5'
 import { AppstoreOutlined } from '@ant-design/icons'
 
 export const routes = [
@@ -29,5 +30,11 @@ export const routes = [
     icon: <AppstoreOutlined />,
     key: '/page4',
     element: <Page4 />,
+  },
+  {
+    label: 'page5',
+    icon: <AppstoreOutlined />,
+    key: '/page5',
+    element: <Page5 />,
   },
 ]
